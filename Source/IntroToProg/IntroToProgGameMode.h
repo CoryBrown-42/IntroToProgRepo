@@ -4,7 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+
+#include "UserProfile.h"
+
 #include "IntroToProgGameMode.generated.h"
+
 
 UCLASS(minimalapi)
 class AIntroToProgGameMode : public AGameModeBase
@@ -13,7 +17,8 @@ class AIntroToProgGameMode : public AGameModeBase
 
 public:
 	AIntroToProgGameMode();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UClassNames)
+	TSubclassOf<UUserProfile> UPBlueprintClassName;
+
 };
-
-
-

@@ -16,11 +16,20 @@ class INTROTOPROG_API UUserProfile : public UObject
 
 public: 
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stats)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Stats")
 	float Armor;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stats)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Stats")
 	float hpMax;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Stats")
+	FString Name;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Unit")
+	TSubclassOf<UObject> UClassOfPlayer; //Displays UCLASS
+
+	UPROPERTY(EditAnywhere, meta=(MetaClass="GameMode"), Category = "Unit")
+	FStringClassReference UClassGameMode;
 
 	
 };
