@@ -19,17 +19,11 @@ public:
 
 	virtual void Init();
 
-
-
-
 	UFUNCTION(BlueprintCallable)
 	void InGameLoadMenu();
 
+
 	TSubclassOf<class UUserWidget> InGameMenuClass;
-
-
-
-
 
 	UFUNCTION(BlueprintCallable)
 	void SayHi();

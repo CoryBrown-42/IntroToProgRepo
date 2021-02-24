@@ -2,15 +2,19 @@
 
 
 #include "IntroGameInstance.h"
-
+#include "UObject/ConstructorHelpers.h"
 #include "Engine/Engine.h"
-
 #include "InGameMenu.h"
 
 
 UIntroGameInstance::UIntroGameInstance(const FObjectInitializer& ObjectInitializer)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Game Init"));
+
+	ConstructorHelpers::FClassFinder<UUserWidget>InGameMenuBPClass(TEXT("/Game/UI/InGameMenu"));
+	//Check if the widget is not null
+	if (!ensure(InGameMenuBPClass.Class != nullptr)) return;
+	InGameMenuClass = InGameMenuBPClass.Class;
 }
 
 

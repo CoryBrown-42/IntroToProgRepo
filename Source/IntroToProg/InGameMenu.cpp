@@ -15,11 +15,9 @@ bool UInGameMenu::Initialize()
 		return false;
 	}
 	ResumeBtn->OnClicked.AddDynamic(this, &UInGameMenu::ResumePressed);
-
 	if (!ensure(ResumeBtn != nullptr)) return false;
 
 	QuitBtn->OnClicked.AddDynamic(this, &UInGameMenu::QuitPressed);
-
 	return true;
 	
 }
