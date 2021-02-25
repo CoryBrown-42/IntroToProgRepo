@@ -22,8 +22,12 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void InGameLoadMenu();
 
+	UFUNCTION(BlueprintCallable)
+	void LoadMainMenu();
+
 
 	TSubclassOf<class UUserWidget> InGameMenuClass;
+	TSubclassOf<class UUserWidget> MainMenuClass;
 
 	UFUNCTION(BlueprintCallable)
 	void SayHi();

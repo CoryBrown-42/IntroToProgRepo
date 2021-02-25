@@ -10,21 +10,19 @@ bool UInGameMenu::Initialize()
 	const bool Success = Super::Initialize();
 	if(!Success) return false;
 
-	if (!ensure(ResumeBtn != nullptr))
-	{
-		return false;
-	}
-	ResumeBtn->OnClicked.AddDynamic(this, &UInGameMenu::ResumePressed);
 	if (!ensure(ResumeBtn != nullptr)) return false;
+	ResumeBtn->OnClicked.AddDynamic(this, &UInGameMenu::ResumePressed);
 
+	if (!ensure(QuitBtn != nullptr)) return false;
 	QuitBtn->OnClicked.AddDynamic(this, &UInGameMenu::QuitPressed);
+
 	return true;
-	
 }
 
 void UInGameMenu::ResumePressed()
 {
-	TakeDown();
+	TakeDown();	
+	//in main menu - open up ThirdPersonExampleMap
 }
 
 void UInGameMenu::QuitPressed()
