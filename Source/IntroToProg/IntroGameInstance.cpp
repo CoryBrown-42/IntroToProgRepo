@@ -18,6 +18,8 @@ UIntroGameInstance::UIntroGameInstance(const FObjectInitializer& ObjectInitializ
 	if (!ensure(InGameMenuBPClass.Class != nullptr)) return;
 	InGameMenuClass = InGameMenuBPClass.Class;
 
+
+
 	ConstructorHelpers::FClassFinder<UUserWidget>MainMenuBPClass(TEXT("/Game/MainMenu/MainMenu"));
 
 	if (!ensure(MainMenuBPClass.Class != nullptr)) return;
