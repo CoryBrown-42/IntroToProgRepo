@@ -16,6 +16,12 @@ class INTROTOPROG_API UInGameMenu : public UMenuWidget
 	
 public:
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (BindWidget))
+		class UButton* ResumeBtn;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (BindWidget))
+		class UButton* QuitBtn;
+
 protected:
 	
 	UFUNCTION()
@@ -23,11 +29,7 @@ protected:
 
 private:
 
-	UPROPERTY(meta = (BindWidget))
-	class UButton* ResumeBtn;
 
-	UPROPERTY(meta = (BindWidget))
-	class UButton* QuitBtn;
 
 	UFUNCTION()
 	void ResumePressed();
